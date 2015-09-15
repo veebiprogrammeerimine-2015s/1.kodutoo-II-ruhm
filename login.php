@@ -9,7 +9,6 @@
 	$create_password = "";
 	$email = "";
 	$repassword = "";
-	$create_passwordre = "";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -42,7 +41,7 @@
 			}
 			if($_POST["password"] !== $_POST["repassword"]){
 				//kui parool ei võrdu kordusparooliga lükkab errori ette
-				$create_passwordre = "Your password does not match the password entered above";
+				$create_password = "Your password does not match the password entered above";
 			}
 		}
 	}
@@ -59,17 +58,22 @@
 	<h2>Login</h2>
 	<p><span class="error">* required field.</span></p>
 	<form action="login.php" method="post">
-	<input name="email" type="email" placeholder="E-mail"> <?php echo $email_error?><br><br>
-	<input name="password" type="password" placeholder="password"> <?php echo $password_error?> <br><br>
+	<input name="email" type="email" placeholder="E-mail"> 
+	<span class="error">* <?php echo $email_error?></span> <br><br>
+	<input name="password" type="password" placeholder="password"> 
+	<span class="error">* <?php echo $password_error?></span> <br><br>
 	<input type="submit" value="Login"> <br><br>
 	</form>
 	
 	<h2>Create user</h2>
 	<p><span class="error">* required field.</span></p>
 	<form action="login.php" method="post">
-	<input name="email" type="email" placeholder="E-mail"> <?php echo $create_email?><br><br>
-	<input name="password" type="password" placeholder="password"> <?php echo $create_password?> <?php echo $create_passwordre?><br><br>
-	<input name="repassword" type="password" placeholder="password again"> <?php echo $create_password?> <?php echo $create_passwordre?><br><br>
+	<input name="email" type="email" placeholder="E-mail"> 
+	<span class="error">* <?php echo $create_email?></span> <br><br>
+	<input name="password" type="password" placeholder="password"> 
+	<span class="error">* <?php echo $create_password?></span> <br><br>
+	<input name="repassword" type="password" placeholder="password again"> 
+	<span class="error">* <?php echo $create_password?> <br><br>
 	<input type="submit" value="Create"> <br><br>
 	</form>
 </body>
