@@ -9,6 +9,7 @@
 	$create_password = "";
 	$email = "";
 	$repassword = "";
+	$create_password ="";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -41,7 +42,7 @@
 			}
 			if($_POST["password"] !== $_POST["repassword"]){
 				//kui parool ei võrdu kordusparooliga lükkab errori ette
-				$create_password = "Your password does not match the password entered above";
+				$create_password2 = "Your password does not match the password entered above";
 			}
 		}
 	}
@@ -73,7 +74,7 @@
 	<input name="password" type="password" placeholder="password"> 
 	<span class="error">* <?php echo $create_password?></span> <br><br>
 	<input name="repassword" type="password" placeholder="password again"> 
-	<span class="error">* <?php echo $create_password?> <br><br>
+	<span class="error">* <?php echo $create_password2?> <br><br>
 	<input type="submit" value="Create"> <br><br>
 	</form>
 </body>
