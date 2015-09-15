@@ -5,7 +5,11 @@
 	//defineerime muutujad
 	$email_error = "";
 	$password_error = "";
+	$create_email = "";
+	$create_password = "";
 	$email = "";
+	$repassword = "";
+	$recreate_password = "";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -25,22 +29,20 @@
 		//kas create email on tühi
 		if(empty($_POST["email"])){
 			//jah oli tühi
-			$email_error = "E-mail is required";
-		}	else{
-			//testib emaili korrektsust
-				$email = test_input($_post["email"]);
-			if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-				$email_error2 = "Invalid email format";
-			}
-		}
+			$create_email = "E-mail is required";
+		}	
 		//kas create password on tühi
 		if(empty($_POST["password"])){
 			//jah oli tühi
-			$password_error = "Password is required";
+			$create_password = "Password is required";
 		}	else{
 				//kontrollib et parool oleks rohkem kui 8 sümbolit
-			if(strlen($_Post["password"]) < 8 ){
-			$password_error = "Must be longer than 8 symbols";
+			if(strlen($_POST["password"]) < 8 ){
+			$create_password = "Must be longer than 8 symbols";
+			}
+			if($password !== $repassword){
+				//kui parool ei võrdu kordusparooliga lükkab errori ette
+				$recreate_password = "Your password does not match the password entered above";
 			}
 		}
 	}
@@ -63,8 +65,9 @@
 	
 	<h2>Create user</h2>
 	<form action="login.php" method="post">
-	<input name="email" type="email" placeholder="E-mail"> <?php echo $email_error?><br><br>
-	<input name="password" type="password" placeholder="password"> <?php echo $password_error?> <br><br>
+	<input name="email" type="email" placeholder="E-mail"> <?php echo $create_email?><br><br>
+	<input name="password" type="password" placeholder="password"> <?php echo $create_password?> <br><br>
+	<input name="repassword" type="password" placeholder="password again"> <?php echo $create_password?> <br><br>
 	<input type="submit" value="Create"> <br><br>
 	</form>
 </body>
