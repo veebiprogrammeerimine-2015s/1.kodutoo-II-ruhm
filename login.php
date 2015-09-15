@@ -39,10 +39,10 @@
 			$password_error = "Password is required";
 		}	else{
 				//kontrollib et parool oleks rohkem kui 8 sümbolit
-				if(strlen($_Post["password"])<8){
+				if(strlen($_Post["password"]) < 8 ){
 				$password_error = "Must be longer than 8 symbols"
 				}
-		}
+			}
 	}
 
 
