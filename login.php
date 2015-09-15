@@ -37,13 +37,6 @@
 			//username väli on tühi
 			$create_user = "Username is required";
 		}	
-			else {
-			$name = test_input($_POST["username"]);
-				// kontrollib, et kasutajanimes ei oleks imelikke sümboleid
-				if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-				$create_user = "Only letters and white spaces are allowed"; 
-				}
-			}
 		//kas create password on tühi
 		if(empty($_POST["password"])){
 			//jah oli tühi
