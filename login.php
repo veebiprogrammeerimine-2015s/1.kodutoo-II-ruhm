@@ -5,12 +5,11 @@
 	//defineerime muutujad
 	$email_error = "";
 	$password_error = "";
-	$create_email = "";
-	$create_password = "";
-	$email = "";
-	$repassword = "";
-	$create_password2 = "";
-	$create_user = "";
+	$create_emailerror = "";
+	$create_passworderror = "";
+	$repassworderror = "";
+	$create_password2error = "";
+	$create_usererror = "";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -30,24 +29,24 @@
 		//kas create email on tühi
 		if(empty($_POST["email"])){
 			//jah oli tühi
-			$create_email = "E-mail is required";
+			$create_emailerror = "E-mail is required";
 		}	
 		if(empty($_POST["username"])){
 			//username väli on tühi
-			$create_user = "Username is required";
+			$create_usererror = "Username is required";
 		}	
 		//kas create password on tühi
 		if(empty($_POST["password"])){
 			//jah oli tühi
-			$create_password = "Password is required";
+			$create_passworderror = "Password is required";
 		}	else{
 				//kontrollib et parool oleks rohkem kui 8 sümbolit
 			if(strlen($_POST["password"]) < 8 ){
-			$create_password = "Must be longer than 8 symbols";
+			$create_passworderror = "Must be longer than 8 symbols";
 			}
 			if($_POST["password"] !== $_POST["repassword"]){
 				//kui parool ei võrdu kordusparooliga lükkab errori ette
-				$create_password2 = "Your password does not match the password entered above";
+				$create_password2error = "Your password does not match the password entered above";
 			}
 		}
 	}
@@ -76,13 +75,13 @@
 	<p><span class="error">* required field.</span></p>
 	<form action="login.php" method="post">
 	<input name="username" type="text" placeholder="Username"> 
-	<span class="error">* <?php echo $create_user?></span> <br><br>
+	<span class="error">* <?php echo $create_usererror?></span> <br><br>
 	<input name="email" type="email" placeholder="E-mail"> 
-	<span class="error">* <?php echo $create_email?></span> <br><br>
+	<span class="error">* <?php echo $create_emailerror?></span> <br><br>
 	<input name="password" type="password" placeholder="password"> 
-	<span class="error">* <?php echo $create_password?></span> <br><br>
+	<span class="error">* <?php echo $create_passworderror?></span> <br><br>
 	<input name="repassword" type="password" placeholder="password again"> 
-	<span class="error">* <?php echo $create_password2?> <br><br>
+	<span class="error">* <?php echo $create_password2error?> <br><br>
 	<input type="submit" value="Create"> <br><br>
 	</form>
 	
