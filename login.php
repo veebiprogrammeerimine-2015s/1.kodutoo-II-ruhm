@@ -9,7 +9,6 @@
 	$create_password = "";
 	$email = "";
 	$repassword = "";
-	$recreate_password = "";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -40,9 +39,9 @@
 			if(strlen($_POST["password"]) < 8 ){
 			$create_password = "Must be longer than 8 symbols";
 			}
-			if($password !== $repassword){
+			if($_POST["password"] !== $_POST["repassword"]){
 				//kui parool ei võrdu kordusparooliga lükkab errori ette
-				$recreate_password = "Your password does not match the password entered above";
+				$create_password = "Your password does not match the password entered above";
 			}
 		}
 	}
@@ -57,6 +56,7 @@
 <body>
 	
 	<h2>Login</h2>
+	<p><span class="error">* required field.</span></p>
 	<form action="login.php" method="post">
 	<input name="email" type="email" placeholder="E-mail"> <?php echo $email_error?><br><br>
 	<input name="password" type="password" placeholder="password"> <?php echo $password_error?> <br><br>
@@ -64,6 +64,7 @@
 	</form>
 	
 	<h2>Create user</h2>
+	<p><span class="error">* required field.</span></p>
 	<form action="login.php" method="post">
 	<input name="email" type="email" placeholder="E-mail"> <?php echo $create_email?><br><br>
 	<input name="password" type="password" placeholder="password"> <?php echo $create_password?> <br><br>
