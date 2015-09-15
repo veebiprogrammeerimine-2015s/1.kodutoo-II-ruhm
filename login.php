@@ -44,7 +44,7 @@
 	<form action="login.php" method="post">
 	<input name="email" type "email" placeholder="E-mail"> <?php echo $email_error?><br><br>
 	<input name="password" type="password" placeholder="password"> <?php echo $password_error?> <br><br>
-	<input type="submit" value="Login"> <br><br>
+	<input type="submit" value="Create"> <br><br>
 	</form>
 </body>
 </html>
