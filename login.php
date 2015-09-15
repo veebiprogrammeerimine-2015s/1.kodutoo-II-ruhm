@@ -11,6 +11,7 @@
 	$repassword = "";
 	$create_password2 = "";
 	$create_user = "";
+	$name = "";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -37,7 +38,7 @@
 			$create_user = "Username is required";
 		}	
 			else {
-			$name = test_input($_POST["name"]);
+			$name = test_input($_POST["username"]);
 				// kontrollib, et kasutajanimes ei oleks imelikke sümboleid
 				if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
 				$create_user = "Only letters and white spaces are allowed"; 
