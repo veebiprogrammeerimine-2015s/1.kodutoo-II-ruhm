@@ -9,7 +9,8 @@
 	$create_password = "";
 	$email = "";
 	$repassword = "";
-	$create_password2 ="";
+	$create_password2 = "";
+	$create_user = "";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -31,6 +32,10 @@
 			//jah oli tühi
 			$create_email = "E-mail is required";
 		}	
+		if(empty($_POST["username"])){
+			//username väli on tühi
+			$create_user = "Username is required";
+		}
 		//kas create password on tühi
 		if(empty($_POST["password"])){
 			//jah oli tühi
@@ -69,6 +74,8 @@
 	<h2>Create user</h2>
 	<p><span class="error">* required field.</span></p>
 	<form action="login.php" method="post">
+	<input name="username" type="text" placeholder="Username"> 
+	<span class="error">* <?php echo $create_user?></span> <br><br>
 	<input name="email" type="email" placeholder="E-mail"> 
 	<span class="error">* <?php echo $create_email?></span> <br><br>
 	<input name="password" type="password" placeholder="password"> 
@@ -77,5 +84,6 @@
 	<span class="error">* <?php echo $create_password2?> <br><br>
 	<input type="submit" value="Create"> <br><br>
 	</form>
+	
 </body>
 </html>
