@@ -9,7 +9,7 @@
 	$create_password = "";
 	$email = "";
 	$repassword = "";
-	$create_password ="";
+	$create_password2 ="";
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
