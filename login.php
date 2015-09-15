@@ -38,7 +38,8 @@ If he won't work then let him go;
 Skidum, skidee, skidoo.
  </p>
 </div>
-
+<img class="irc_mi" style="margin-top: 31px;" src="http://images.sodahead.com/polls/000182383/polls_kkk_4643_222983_answer_1_xlarge.jpeg" width="350" height="332">
+<a href="https://www.youtube.com/watch?v=CPMdiUOy-jo">Selgitus video</a>
 <h2> Login </h2>
 <form action="login.php" method="POST">
 <input type="email" placeholder="E-post"><?php echo  $email_error; ?>  <br><br>
