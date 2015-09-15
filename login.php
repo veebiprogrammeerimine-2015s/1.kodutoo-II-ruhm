@@ -61,7 +61,7 @@
 </head>
 <body>
 	
-	<h2>Mõtlesin siis teha lehe kuhu inimesed saavad teha postitusi erinevate teemade ja teised saavad siis kommenteerida, põhimõtteliselt väga lihtsustatud reddit</h2>
+	<h3>Mõtlesin siis teha lehe kuhu inimesed saavad teha postitusi erinevate teemade alla ja teised saavad siis kommenteerida, põhimõtteliselt väga lihtsustatud reddit</h3>
 	<h2>Login</h2>
 	<p><span class="error">* required field.</span></p>
 	<form action="login.php" method="post">
