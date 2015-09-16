@@ -39,6 +39,15 @@
 		<input type="submit" value="Logi sisse"> <br><br>
 	</form>
 	<h2>Create user</h2>
+	<form action="creat user.php" method="post">
+		<input name="first name" type="text" placeholder="Eesnimi" > <?php echo $first_name_error
+		?> <br><br>
+		<input name="last name" type="text" placeholder="Perekonnanimi"> <?php echo $last_name_error ?> <br><br>
+	
+	
+	
+	
+	
 </body>
 
 </html>
