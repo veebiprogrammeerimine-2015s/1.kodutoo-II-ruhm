@@ -51,13 +51,15 @@
 	<input type="submit" value="Logi sisse"> <br><br>
 	</form>
 	<h2> Konto loomine</h2>
-	<form action="signup.php" method="post" >
+	<form action="login.php" method="post" >
 	<input name="first name" type="text" placeholder="Eesnimi"><?php echo $first_name_error ?> <br><br>
 	<input name="lastname" type="text" placeholder="Perekonnanimi"><?php echo $last_name_error ?> <br><br>
 	<input name="email" type="email" placeholder="E-post"><?php echo $email_error ?> <br><br>
 	<input name="password" type="password" placeholder="Parool"><?php echo $password_error ?> <br><br>
 	<input type="submit" value="Registreeri">
 	</form>
+	<br><br>
+	<p>Mvp ideeks mõtlesin teha mingi veebirakenduse disc golfi jaoks. Ma pole päris kindel, kuidas ja kas seda teha saab, aga esialgne mõte oli, et kasutaja saaks sisestada, mis on raja par ja siis sisestada mitu viset tal endal ketta korvi saamiseks kulus. Samuti võiks rakendus näidata ka üldskoori, kus on summeeritud kõikide radade par ning enda skoor. Loodetavasti midagi sellist sobiks!?</p>
 	
 	
 </body>
