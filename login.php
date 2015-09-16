@@ -69,7 +69,7 @@
 		<input type="submit" value="Logi sisse"> <br><br>
 	</form>
 	<h2>Create user</h2>
-	<form action="creat user.php" method="post">
+	<form action="login.php" method="post">
 		<input name="first name" type="text" placeholder="Eesnimi" > <?php echo $first_name_error ?> <br><br>
 		<input name="last name" type="text" placeholder="Perekonnanimi"> <?php echo $last_name_error ?> <br><br>
 		<input name="email1" type="email" placeholder="E-post" > <?php echo $email1_error ?> <br><br>
@@ -80,6 +80,7 @@
 	</form>
 	
 	
+
 	
 	
 	
