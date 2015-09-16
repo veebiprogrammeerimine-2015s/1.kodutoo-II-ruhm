@@ -4,6 +4,8 @@
 	// Defineerime mingid muutujad
 	$email_error ="";
 	$password_error ="";
+	$first_name_error ="";
+	$last_name_error ="";
 	
 	// kontrollin, kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,7 +22,14 @@
 			
 			$password_error = "See väli on kohustuslik";
 		}
-		
+		if(empty($_POST["first name"])) {
+			
+			$first_name_error ="See väli on kohustuslik";
+		}
+		if(empty($_POST["last name"])) {
+			
+			$last_name_error ="See väli on kohustuslik";
+		}
 	}
 	
 
@@ -43,7 +52,11 @@
 		<input name="first name" type="text" placeholder="Eesnimi" > <?php echo $first_name_error
 		?> <br><br>
 		<input name="last name" type="text" placeholder="Perekonnanimi"> <?php echo $last_name_error ?> <br><br>
-	
+		<input name="email1" type="email" placeholder="E-post" > <?php echo $email1_error ?> <br><br>
+		<input name="email2" type="email" placeholder="Korda e-posti" > <?php echo $email2_error ?> <br><br>
+		<input name="password1" type="password" placeholder="Parool"> <?php echo $password1_error ?> <br><br>
+		<input name="password2" type="password" placeholder="Korda parooli"> <?php echo $password2_error ?> <br><br>
+		<input type="submit" value="Loo konto"> <br><br>
 	
 	
 	
