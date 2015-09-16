@@ -14,12 +14,12 @@
 		//kas e-post on tyhi
 		if( empty($_POST["email"])) {
 			//jah oli tyhi
-			$email_error = "See vali on kohustuslik";
+			$email_error = "See väli on kohustuslik";
 			
 		}
 		if( empty($_POST["password"])) {
 			//jah oli tyhi
-			$password_error = "See vali on kohustuslik";
+			$password_error = "See väli on kohustuslik";
 			
 		}
 	}
@@ -36,6 +36,13 @@
 	<input type="submit" value="Logi sisse"> <br><br>
 	</form>
 	<h2> Create user</h2>
+	
+	<form action="register.php" method="post" >
+	<input name="first name" type="text" placeholder="Eesnimi"> <br><br>
+	<input name="lastname" type="text" placeholder="Perekonnanimi"> <br><br>
+	<input name="email" type="email" placeholder="E-post"> <br><br>
+	<input name="password" type="password" placeholder="Parool"> 
+	
 	
 </body>
 
