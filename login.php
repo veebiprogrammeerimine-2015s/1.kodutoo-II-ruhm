@@ -40,6 +40,13 @@
 		
 		
 	}
+
+				if(empty($_POST["lastname"])){
+		
+		$lastname_error = "See väli on kohustuslik ";
+		
+		
+	}
 		
 	}
 
@@ -56,6 +63,7 @@
 			<input name="username" type="text" placeholder="Nimi"><?php  echo $username_error; ?><br /><br />
 			<input name="email" type="email" placeholder="E-mail"><?php  echo $email_error; ?><br /><br />
 			<input name="firstname" type="text" placeholder="Eesnimi"><?php  echo $firstname_error; ?><br /><br />
+			<input name="lastname" type="text" placeholder="Perekonnanimi"><?php  echo $lastname_error; ?><br /><br />
 			<input name="password" type="password" placeholder="Password"><?php  echo $password_error; ?><br /><br />
 			<input type="submit" value="topkek">
 		</form>
