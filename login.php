@@ -32,6 +32,11 @@
 	<input type="submit" value="Logi sisse"> <br><br>
 	</form>
 	<h2>Create user</h2>
+	<input name="mail" type="email" placeholder="E-post"> <br><br>
+	<input name="password" type="password" placeholder="Parool"> <br><br>
+	<input name="confirm_password" type="password" placeholder="Korda parooli"> <br><br>
+	<input name="name" type="name" placeholder="Eesnimi"> <br><br>
+	<input name="lastname" type="name" placeholder="Perekonnanimi"> <br><br>
 
 </body>
 
