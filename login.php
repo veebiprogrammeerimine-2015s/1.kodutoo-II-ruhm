@@ -73,3 +73,14 @@
 	</body>
 
 </html>
+
+MVP idee
+
+Minu mvp idee oli teha lehekülg, kus kasutajad saavad korraldada enda turniire. Eelkõige mõtlesin seda 
+teha just erinevatel arvutimängudele ehk e-spordiks. Kuna olen ise natukene e-spordiga seotud nii fännina kui ka väikest viisi
+ise mängijana (mitte midagi tõsist, vaid hobikorras meelelahutamiseks). Kuna nö e-spordi alasid on palju ja nende reeglid
+ja formaadid erinevad siis esialgu kaasaksin ainult Counter Strike: Global Offensive. Selle mänguga on mul kõige suurem
+kogemus ja arusaamine erinevatest e-spordi formaatidest. Mida leht endast kujutaks oleks esmaste plaanide kohaselt see, et
+kasutajad saavad registreerud ja korraldada enda turniir kergelt. Paneksin erinevad formaadid kiirvalikutena ja näiteks tühjad välja
+2 tiimi liikmete jaoks. Mittekohustuslik auhinna väli võiks ka olla. Kui võimalik siis lisaksin näiteks mingisuguse timeri erinevate 
+turniiride algusaegadeni jne. See on praegu kõik, hetkel pähe tuleb, aga eks kui uusi asju teeme tekkib veel mõtteid.
