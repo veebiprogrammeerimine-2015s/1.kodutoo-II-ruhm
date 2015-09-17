@@ -53,11 +53,11 @@
 ?>
 <html>
 	<head>
-		<title>Top Kek</title>
+		<title>Kasutaja loomis vorm</title>
 	</head>
 
 	<body>
-		<h1>Top Kek</h1>
+		<h1>Kasutaja loomis vorm</h1>
 		
 		<form action="login.php" method="post">
 			<input name="username" type="text" placeholder="Nimi"><?php  echo $username_error; ?><br /><br />
