@@ -15,17 +15,25 @@
 		if( empty($_POST["email"]) ) {
 			
 			//jah oli tühi
-			$email_error = "See väli on kohustuslik";
+			$email_error = "E-post on kohustuslik!";
 		}
 		//Kas parool on tühi
 		if( empty($_POST["password"]) ) {
 			
 			//jah oli tühi
-			$password_error = "See väli on kohustuslik";
+			$password_error = "Parool on kohustuslik!";
 		
 		}
+		
+		
 	}
 ?>
+
+
+
+
+
+
 <html>
 	<head>
 		<title>Login page</title>
@@ -40,7 +48,14 @@
 			<input type="submit" value="Logi sisse"> <br><br>
 		</form>
 		<h2>Create user</h2>
-		
+		<form action="login.php" method="post"> 
+			<input name="email" type="email" placeholder="E-post"> <?php echo $email_error; ?> <br><br>
+			<input name="password" type="password" placeholder="Parool"> <?php echo $password_error; ?> <br><br>
+			<input name="password" type="password" placeholder="Parool uuesti"> <?php echo $password_error; ?> <br><br>
+			<input name="firstname" type="text" placeholder="Eesnimi"> <?php echo $email_error; ?> <br><br>
+			<input name="lastname" type="text" placeholder="Perekonnanimi"> <?php echo $email_error; ?> <br><br>
+			<input type="submit" value="Registreeru"> <br><br>
+		</form>
 	</body>
 
 </html>
