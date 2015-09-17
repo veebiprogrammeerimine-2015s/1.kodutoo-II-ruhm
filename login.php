@@ -5,7 +5,8 @@
 	//defineerime muutujad
 	$email_error = "";
 	$password_error = "";
-	
+	$firstname_error = "";
+	$lastname_error = "";
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		
@@ -22,6 +23,19 @@
 			
 			//jah oli tühi
 			$password_error = "Parool on kohustuslik!";
+		
+		}
+		if( empty($_POST["text"]) ) {
+			
+			//jah oli tühi
+			$firstname_error = "Eesnimi on kohustuslik!";
+		
+		}
+		
+		if( empty($_POST["text"]) ) {
+			
+			//jah oli tühi
+			$lastname_error = "Perekonnanimi on kohustuslik!";
 		
 		}
 		
@@ -52,8 +66,8 @@
 			<input name="email" type="email" placeholder="E-post"> <?php echo $email_error; ?> <br><br>
 			<input name="password" type="password" placeholder="Parool"> <?php echo $password_error; ?> <br><br>
 			<input name="password" type="password" placeholder="Parool uuesti"> <?php echo $password_error; ?> <br><br>
-			<input name="firstname" type="text" placeholder="Eesnimi"> <?php echo $email_error; ?> <br><br>
-			<input name="lastname" type="text" placeholder="Perekonnanimi"> <?php echo $email_error; ?> <br><br>
+			<input name="firstname" type="text" placeholder="Eesnimi"> <?php echo $firstname_error; ?> <br><br>
+			<input name="lastname" type="text" placeholder="Perekonnanimi"> <?php echo $lastname_error; ?> <br><br>
 			<input type="submit" value="Registreeru"> <br><br>
 		</form>
 	</body>
