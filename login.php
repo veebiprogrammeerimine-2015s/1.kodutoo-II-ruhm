@@ -76,7 +76,7 @@
 			<input name="tel" type="tel" pattern="[0-9]{10}" placeholder="Telefoni number"><?php  echo $tel_error; ?><br /><br />
 			<input type="text" placeholder="Amet"><br /><br />
 			<input name="password" type="password" placeholder="Password"><?php  echo $password_error; ?><br /><br />
-			<input type="submit" value="topkek">
+			<input type="submit" value="Registreeru">
 		</form>
 	</body>
 
