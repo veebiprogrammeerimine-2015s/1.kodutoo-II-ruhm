@@ -5,6 +5,7 @@
 	$username_error ="";
 	$email_error ="";
 	$password_error ="";
+	$firstname_error ="";
 	
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
 		
@@ -31,6 +32,14 @@
 		
 		
 	}
+
+
+				if(empty($_POST["firstname"])){
+		
+		$firstname_error = "See väli on kohustuslik ";
+		
+		
+	}
 		
 	}
 
@@ -46,6 +55,7 @@
 		<form action="login.php" method="post">
 			<input name="username" type="text" placeholder="Nimi"><?php  echo $username_error; ?><br /><br />
 			<input name="email" type="email" placeholder="E-mail"><?php  echo $email_error; ?><br /><br />
+			<input name="firstname" type="text" placeholder="Eesnimi"><?php  echo $firstname_error; ?><br /><br />
 			<input name="password" type="password" placeholder="Password"><?php  echo $password_error; ?><br /><br />
 			<input type="submit" value="topkek">
 		</form>
