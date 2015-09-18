@@ -4,7 +4,10 @@
 	
 	//defineerime muutujad
 	$email_error = "";
+	$create_email_error = "";
 	$password_error = "";
+	$create_password_error = "";
+	$create_password_again_error = "";
 	$firstname_error = "";
 	$lastname_error = "";
 	//kontrollin kas keegi vajutas nuppu
@@ -18,11 +21,28 @@
 			//jah oli tühi
 			$email_error = "E-post on kohustuslik!";
 		}
+		if( empty($_POST["email"]) ) {
+			
+			//jah oli tühi
+			$create_email_error = "E-post on kohustuslik!";
+		}
 		//Kas parool on tühi
 		if( empty($_POST["password"]) ) {
 			
 			//jah oli tühi
 			$password_error = "Parool on kohustuslik!";
+		
+		}
+		if( empty($_POST["password"]) ) {
+			
+			//jah oli tühi
+			$create_password_again_error = "Parool on kohustuslik!";
+		
+		}
+		if( empty($_POST["password"]) ) {
+			
+			//jah oli tühi
+			$create_password_error = "Parool on kohustuslik!";
 		
 		}
 		if( empty($_POST["text"]) ) {
@@ -63,9 +83,9 @@
 		</form>
 		<h2>Create user</h2>
 		<form action="login.php" method="post"> 
-			<input name="email" type="email" placeholder="E-post"> <?php echo $email_error; ?> <br><br>
-			<input name="password" type="password" placeholder="Parool"> <?php echo $password_error; ?> <br><br>
-			<input name="password" type="password" placeholder="Parool uuesti"> <?php echo $password_error; ?> <br><br>
+			<input name="email" type="email" placeholder="E-post"> <?php echo $create_email_error; ?> <br><br>
+			<input name="password" type="password" placeholder="Parool"> <?php echo $create_password_error; ?> <br><br>
+			<input name="password" type="password" placeholder="Parool uuesti"> <?php echo $create_password_again_error; ?> <br><br>
 			<input name="firstname" type="text" placeholder="Eesnimi"> <?php echo $firstname_error; ?> <br><br>
 			<input name="lastname" type="text" placeholder="Perekonnanimi"> <?php echo $lastname_error; ?> <br><br>
 			<input type="submit" value="Registreeru"> <br><br>
