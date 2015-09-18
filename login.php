@@ -69,13 +69,13 @@
 		<h1>Kasutaja loomis vorm</h1>
 		
 		<form action="login.php" method="post">
-			<input name="username" type="text" placeholder="Nimi"><?php  echo $username_error; ?><br /><br />
+			<input name="username" type="text" placeholder="Nimi" pattern=".{5,10}" required title="5 to 10 märki"><?php  echo $username_error; ?><br /><br />
 			<input name="email" type="email" placeholder="E-mail"><?php  echo $email_error; ?><br /><br />
 			<input name="firstname" type="text" placeholder="Eesnimi"><?php  echo $firstname_error; ?><br /><br />
 			<input name="lastname" type="text" placeholder="Perekonnanimi"><?php  echo $lastname_error; ?><br /><br />
 			<input name="tel" type="tel" pattern="[0-9]{10}" placeholder="Telefoni number"><?php  echo $tel_error; ?><br /><br />
 			<input type="text" placeholder="Amet"><br /><br />
-			<input name="password" type="password" placeholder="Password"><?php  echo $password_error; ?><br /><br />
+			<input name="password" type="password" placeholder="Password" pattern=".{8,16}" required title="8 kuni 16 märki"><?php  echo $password_error; ?><br /><br />
 			<input type="submit" value="Registreeru">
 		</form>
 	</body>
