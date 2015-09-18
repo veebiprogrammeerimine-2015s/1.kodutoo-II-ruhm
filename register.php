@@ -1,11 +1,9 @@
 <?php
-
-	//echo $_POST["email"];
-
 	//Defineerime muutujad
 	$email_error = "";
 	$password_error = "";
-	
+	$password_error2 = "";
+	$password_error3 = "";
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		
@@ -23,24 +21,31 @@
 			//jah oli tühi
 			$password_error = "See väli on kohustuslik";
 		}
-		
+		if( empty($_POST["password2"]) ) {
+			
+			//jah oli tühi
+			$password_error2 = "See väli on kohustuslik";
+		}
+		if(($_POST["password"]) !== ($_POST["password2"])); {
+			
+			$password_error3 = "Parool ei kattu esimese parooliga";
+			echo"Paroolid ei kattu omavahel!";
+		}
 	}
 ?>
 <html>
 	<head>
-		<title>Login page</title>
+		<title>Register page</title>
 	</head>
 	<body>
-		<h2>Login</h2>
-		<form action="login.php" method="post">
+		<h2>Register</h2>
+		<form action="register.php" method="post">
 		<input name="email" type="email" placeholder="E-post"> <?php echo $email_error; ?> <br><br>
 		<input name="password" type="password" placeholder="Parool" > <?php echo $password_error; ?> <br><br>
-		<input type="submit" value="Logi sisse"> <br><br>
+		<input name="password2" type="password" placeholder="Parool" > <?php echo $password_error2;?> <br><br>
+		<input type="submit" value="register"> <br><br>
 		</form>
 		
-		
-		<h2>Create user</h2>
-		<a href="register.php"> <button>Registreeri  </button> </a>
 		
 	</body>
 </html>
