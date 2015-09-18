@@ -56,6 +56,8 @@
 		
 		
 	}
+	
+	
 		
 	}
 
@@ -69,7 +71,7 @@
 		<h1>Kasutaja loomis vorm</h1>
 		
 		<form action="login.php" method="post">
-			<input name="username" type="text" placeholder="Nimi" pattern=".{5,10}" required title="5 to 10 märki"><?php  echo $username_error; ?><br /><br />
+			<input name="username" type="text" placeholder="Kasutajanimi" pattern=".{5,10}" required title="5 to 10 märki"><?php  echo $username_error; ?><br /><br />
 			<input name="email" type="email" placeholder="E-mail"><?php  echo $email_error; ?><br /><br />
 			<input name="firstname" type="text" placeholder="Eesnimi"><?php  echo $firstname_error; ?><br /><br />
 			<input name="lastname" type="text" placeholder="Perekonnanimi"><?php  echo $lastname_error; ?><br /><br />
