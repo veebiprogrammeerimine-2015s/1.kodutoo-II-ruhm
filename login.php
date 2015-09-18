@@ -52,7 +52,7 @@
 	</form>
 	<h2> Konto loomine</h2>
 	<form action="login.php" method="post" >
-	<input name="first name" type="text" placeholder="Eesnimi"><?php echo $first_name_error ?> <br><br>
+	<input name="first_name" type="text" placeholder="Eesnimi"><?php echo $first_name_error ?> <br><br>
 	<input name="lastname" type="text" placeholder="Perekonnanimi"><?php echo $last_name_error ?> <br><br>
 	<input name="email" type="email" placeholder="E-post"><?php echo $email_error ?> <br><br>
 	<input name="password" type="password" placeholder="Parool"><?php echo $password_error ?> <br><br>
