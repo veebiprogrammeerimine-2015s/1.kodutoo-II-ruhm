@@ -83,9 +83,9 @@
 		</form>
 		<h2>Create user</h2>
 		<form action="login.php" method="post"> 
-			<input name="email" type="email" placeholder="E-post"> <?php echo $create_email_error; ?> <br><br>
-			<input name="password" type="password" placeholder="Parool"> <?php echo $create_password_error; ?> <br><br>
-			<input name="password" type="password" placeholder="Parool uuesti"> <?php echo $create_password_again_error; ?> <br><br>
+			<input name="create_email" type="email" placeholder="E-post"> <?php echo $create_email_error; ?> <br><br>
+			<input name="create_password" type="password" placeholder="Parool"> <?php echo $create_password_error; ?> <br><br>
+			<input name="create_password_again" type="password" placeholder="Parool uuesti"> <?php echo $create_password_again_error; ?> <br><br>
 			<input name="firstname" type="text" placeholder="Eesnimi"> <?php echo $firstname_error; ?> <br><br>
 			<input name="lastname" type="text" placeholder="Perekonnanimi"> <?php echo $lastname_error; ?> <br><br>
 			<input type="submit" value="Registreeru"> <br><br>
