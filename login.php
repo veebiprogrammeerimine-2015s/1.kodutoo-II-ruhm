@@ -90,7 +90,7 @@
 	
 	<body>
 		<h1>Kasutaja loomis vorm</h1>
-		<!--Idee on luua kokaraamat, kuhu saab retsepte lisada, muuta, vaadata ja kustutada-->
+		<!--Idee on luua kokaraamat, kuhu saab retsepte lisada, muuta, vaadata ja kustutada. Retseptide vaatamiseks peab sisselogima/kasutaja tegema-->
 		<form action="login.php" method="post">
 			<input name="username" type="text" placeholder="Kasutajanimi" pattern=".{5,10}" required title="5 to 10 märki"><?php  echo $username_error; ?><br /><br />
 			<input name="email" type="email" placeholder="E-mail"><?php  echo $email_error; ?><br /><br />
