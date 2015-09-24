@@ -73,6 +73,6 @@
 	<input type="submit" value="Loo kasutaja"> <br><br>
 	</form>
 </body>
-
+<p>Minu MVP idee oleks seotud ühe minu lemmiku mänguga. Lehel oleks õpetused kuidas mängu oleks kergem läbida ning oleks ka võimalus luua kasutaja ning lisada enda soovitusi mängu läbimiseks.
 
 </html>
