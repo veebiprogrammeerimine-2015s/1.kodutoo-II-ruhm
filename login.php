@@ -81,7 +81,7 @@
 	
 	
 
-	
+<p>Esialgne idee - mõtlesin, et võiksin teha sellise lehe, kuhu iga kasutaja saab sisestada, mis filmi ta viimati vaatas ning jätta selle kohta kommentaari. Samuti võiks seal saada teha ka enda top 20 vaadatud filmidest ning listi filmidest, mida tulevikus kindlasti vaadata soovib.</p>
 	
 	
 </body>
