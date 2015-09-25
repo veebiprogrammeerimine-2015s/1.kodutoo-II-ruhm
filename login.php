@@ -50,7 +50,7 @@
   	<input name="create_password" type="password" placeholder="Parool"> <?php echo $create_password_error; ?> <br><br>
   	<input type="submit" name="create" value="Create user">
   </form>
-  </form>
+  
 	
 </body>
 
