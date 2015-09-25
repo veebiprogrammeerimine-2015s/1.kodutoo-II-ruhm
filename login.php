@@ -44,43 +44,54 @@ $parool_error = "See väli on kohustuslik";
  
 
 <?php
+
     // *********************
-    // **** LOGI SISSE *****
+    // ** LOO KASUTAJA *****
     // *********************
-		if(isset($_POST["login"])){
+    if(isset($_POST["create"])){
 
-			if ( empty($_POST["email"]) ) {
-				$email_error = "See väli on kohustuslik";
+			if ( empty($_POST["create_email"]) ) {
+				$create_email_error = "See väli on kohustuslik";
 			}else{
-        // puhastame muutuja võimalikest üleliigsetest sümbolitest
-				$email = cleanInput($_POST["email"]);
-			}
-
-			if ( empty($_POST["password"]) ) {
-				$password_error = "See väli on kohustuslik";
-			}else{
-				$password = cleanInput($_POST["password"]);
+				$create_email = cleanInput($_POST["create_email"]);
 			}
 
-      // Kui oleme siia jõudnud, võime kasutaja sisse logida
-			if($password_error == "" && $email_error == ""){
-				echo "Võib sisse logida! Kasutajanimi on ".$email." ja parool on ".$password;
+			if ( empty($_POST["create_password"]) ) {
+				$create_password_error = "See väli on kohustuslik";
+			} else {
+				if(strlen($_POST["create_password"]) < 8) {
+					$create_password_error = "Peab olema vähemalt 8 tähemärki pikk!";
+				}else{
+					$create_password = cleanInput($_POST["create_password"]);
+				}
 			}
-			$password_hash=hash("sha512",$password);
-			$stmt-> prerpare ("select id, email, from user_sample where email=? and password=?")
-			$stmt -> bind_param("ss",$email,$password_hash);
-			//paneme vastuse muutujasse
-			$stmt->bind_result($id_from_db, $emial_from_db);
-			$stmt -> execute();
-			if ($stmt -> fetch()){
-				//leidis
-				echo "kasutaja id=". $id_from_db;
-			}else{
-				//tühi, ei leidnud, midagi on valesti
-				echo"wrong password or email";
+			
+			
+			
+			
+			
+
+			if(	$create_email_error == "" && $create_password_error == ""){
+				echo "Võib kasutajat luua! Kasutajanimi on ".$create_email." ja parool on ".$create_password;
+      }
+			{
+				$password_hash = hash("sha512", $create_password);
+				echo "<br>";
+				echo $password_hash;
+				
+				$stmt = $mysqli->prepare("INSERT INTO user_sample (email, password) VALUES (?, ?)");
+				
+				//echo $mysqli->error;
+				//echo $stmt->error;
+				//asendame ? märgid muutujate väärtuste
+				// ss - s tähendab string iga muutuja kohta
+				$stmt->bind_param("ss", $create_email, $password_hash);
+				$stmt->execute();
+				$stmt->close();
 			}
-		} // login if end
+    } // create if end
 ?>
+
 
 
 <h2> Create User </h2>
