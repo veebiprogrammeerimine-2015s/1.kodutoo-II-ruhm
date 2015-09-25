@@ -1,0 +1,3 @@
+Minu mõte mvp-ks on teha produktiivsust jälgiv sait.
+Näiteks jagan oma ajakulu teatud kategooriateks (kool, magamine, sport, meelelahutus, transport jne.)
+ja jälgin ennast mõnda aega. Peale seda saaks luua igasuguseid huvitavaid tabeleid ja ennast nende põhjal analüüsida.
