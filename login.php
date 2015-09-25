@@ -50,8 +50,8 @@ $parool_error = "See väli on kohustuslik";
     // *********************
     if(isset($_POST["create"])){
 
-			if ( empty($_POST["create_email"]) ) {
-				$create_email_error = "See väli on kohustuslik";
+			if ( empty($_POST["User"]) ) {
+				$create_user_error = "See väli on kohustuslik";
 			}else{
 				$create_email = cleanInput($_POST["create_email"]);
 			}
@@ -98,9 +98,9 @@ $parool_error = "See väli on kohustuslik";
  
 <input text="Name" placeholder ="Name">
 <input text ="Lastname" placeholder="Lastname"><br><br>
-<input text="User" placeholder="User">
-<input text="Password" placeholder="Password"><br><br>
-<input text="Email" placeholder="Email"><br><br>
+<input text="User" placeholder="User"><?php $user_error;?>
+<input text="Password" placeholder="Password"><?php $password_error?><br><br>
+<input text="Email" placeholder="Email"><?php $emial_error?>
 <input type="submit" value="Submit"><br><br>
  Idee kirjeldus. Lisan lehele Logimis ja registeerimis vormid, peale mida lisan lehti juurde ja mõned pildid etc.
 
