@@ -43,8 +43,25 @@
 			
 		}
 		
-		if(empty($_POST["create"])){
-			
+		if(isset($_POST["create"])){
+			if(empty($_POST["create_email"])){
+				$create_email_error = "see väli on kohustuslik";
+			}
+		}
+		if(isset($_POST["create"])){
+			if(empty($_POST["create_password"])){
+				$create_password_error = "see väli on kohustuslik";
+			}
+		}
+		if(isset($_POST["create"])){
+			if(empty($_POST["create_name"])){
+				$create_name_error = "see väli on kohustuslik";
+			}
+		}
+		if(isset($_POST["create"])){
+			if(empty($_POST["create_age"])){
+				$create_age_error = "see väli on kohustuslik";
+			}
 		}
 		
 		
