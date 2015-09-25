@@ -1,7 +1,4 @@
 <?php
-
-	// Idee 
-	//Kasutaja saab sisestada summa, mida ta tahaks investeerida ning leht pakub välja erinevaid võimalusi, kuhu see siis paigutada. Võiks ka näidata riski protsenti, aasta tootlust ning kiiret ülevaadet.
 		
 	// muuutujad errorite jaoks
 	$email_error = "";
@@ -69,13 +66,11 @@
 	<title>Login page</title>
 </head>
 <body>
-
-	
 	<h2>Login</h2>
 	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" >
 	<input name="email" type="email" placeholder="E-post"> <?php echo $email_error;?> <br> <br> 
 	<input name="password" type="password" placeholder="Parool"> <?php echo $password_error;?> <br> <br> 
-	<input type="submit" name="login" value="Logi sisse"> <br> <br>
+	<input type="submit" value="Logi sisse"> <br> <br>
 	</form>
 	
 	
@@ -89,7 +84,7 @@
 
 	<input name="create_email" type="email" placeholder="E-post" value="<?php echo $create_email; ?>"> <?php echo $create_email_error; ?><br><br>
   	<input name="create_password" type="password" placeholder="Parool"> <?php echo $create_password_error; ?> <br><br>
-  	<input type="submit" name="create" value="Registreeru">
+  	<input type="submit" value="Registreeru">
 	</form>
 </body>
 
