@@ -4,7 +4,7 @@
 	$password_error = "";
 	$password_error2 = "";
 	$password_error3 = "";
-	$password_error_pikkus = "";
+	$password_error_length = "";
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		
@@ -23,7 +23,7 @@
 			$password_error = "See väli on kohustuslik";
 		}
 		elseif (strlen($_POST["password"]) <= 7){
-			$password_error_pikkus = "Parool peab olema vähemalt 8 tähemärki.";
+			$password_error_length = "Parool peab olema vähemalt 8 tähemärki.";
 		} 
 		if( empty($_POST["password2"]) ) {
 			
@@ -44,7 +44,7 @@
 		<h2>Register</h2>
 		<form action="register.php" method="post">
 		<input name="email" type="email" placeholder="E-post"> <?php echo $email_error; ?> <br><br>
-		<input name="password" type="password" placeholder="Parool" > <?php echo $password_error; echo $password_error_pikkus; ?> <br><br>
+		<input name="password" type="password" placeholder="Parool" > <?php echo $password_error; echo $password_error_length; ?> <br><br>
 		<input name="password2" type="password" placeholder="Parool" > <?php echo $password_error2; echo $password_error3 ?> <br><br>
 		<input type="submit" value="register"> <br><br>
 		</form>

@@ -36,6 +36,7 @@
 		<input name="email" type="email" placeholder="E-post"> <?php echo $email_error; ?> <br><br>
 		<input name="password" type="password" placeholder="Parool" > <?php echo $password_error; ?> <br><br>
 		<input type="submit" value="Logi sisse"> <br><br>
+		<p>Minu MVP idee selleks ülesandeks on luua selline leht, kus saab registreerida ja sisse logida. Sisult sarnaneks see vanade heade brauserimängudega, kus pidi mitu korda vajutama nuppudele, et leveleid ja tooteid tekitada(näiteks metsas puid lõhkuda ja siis salvestab iga nupuvajutusega uue koguse puitu vms). Edasi arendaks sellele mitmeid võimalusi juurde.</p>
 		</form>
 		
 		
