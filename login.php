@@ -28,25 +28,48 @@
 	
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		//echo "jah";
-		//kas nimi on tühi
+		
+		//kas epost on tühi
 		if(empty($_POST["email"])){
 			$email_error = "See väli on kohustuslik";
 		}
 		
 		
-		
-		
-		$password_error = "See väli on kohustuslik";
-		$createuserlogin_error = "See väli on kohustuslik";
-		//kas e-post on tühi
-		$createuseremail_error = "See väli on kohustuslik";
 		//kas parool on tühi
-		$createuserpassword_error = "See väli on kohustuslik";
-		//kas aadress on tühi
-		$createuseradress_error = "See väli on kohustuslik";
-		//kas telefon on tühi
-		$createusertelephone_error = "See väli on kohustuslik";
+		if(empty($_POST["password"])){
+			$password_error = "See väli on kohustuslik";
+		}
+		
+		
+		//kas kasutajanime loomine on tühi
+		if(empty($_POST["create_login"])){
+			$createuserlogin_error = "See väli on kohustuslik";
+		}
+	
+		//kas emaili loomine on tühi
+		if(empty($_POST["create_email"])){
+			$createuseremail_error = "See väli on kohustuslik";
+		}
+	
+		
+		//kas parooli loomine on tühi
+		if(empty($_POST["create_password"])){
+			$createuserpassword_error = "See väli on kohustuslik";
+		}
+	
+		
+		//kas aadressi loomine on tühi
+		if(empty($_POST["create_adress"])){
+			$createuseradress_error = "See väli on kohustuslik";
+		}
+	
+	
+		//kas telefoni loomine on tühi
+		if(empty($_POST["create_telephone"])){
+			$createusertelephone_error = "See väli on kohustuslik";
+		}
+		
+		
 	}
 ?>
 <html>
