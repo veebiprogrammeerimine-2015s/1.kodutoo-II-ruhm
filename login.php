@@ -8,6 +8,9 @@
 	$first_name_error = "";
 	$last_name_error = "";
 	$date_error = "";
+	$cemail_error ="";
+	$cpassword_error ="";
+	
 	
 	//kontrollin, kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -49,10 +52,24 @@
 	
 		}
 		
-		if ( empty($_POST["last_name"])	) {
+		if ( empty($_POST["date"])	) {
 			
 			//jah oli tühi
 			$date_error = "See väli on kohustuslik";
+	
+		}
+		
+				if ( empty($_POST["cemail"])	) {
+			
+			//jah oli tühi
+			$cemail_error = "See väli on kohustuslik";
+	
+		}
+		
+						if ( empty($_POST["cpass"])	) {
+			
+			//jah oli tühi
+			$cpassword_error = "See väli on kohustuslik";
 	
 		}
 		
@@ -91,7 +108,6 @@
 	<input type="submit" value="Registeeri">
 	</form>
 	MVP idee
-	
 	Idee seisneb selles, et inimesed, kes käivad jõusaalis, saaks mugavalt oma järgida oma toitumist.
 	 Koostaks kalkulaatori(vanus, rasvaprotsent, kui palju liigutakse nädalas) ja vastavalt oma soovidele(kaalu kaotus/massi suurendamine) näeks inimene, kuidas toiteväärtust muuta ja kuidas õigesti süüa.
 	 Et asja natuke omamoodi luua, siis võiks olla lisa võimalus, et koostab päeva ja hiljem nädalaplaani ja lisab sellele kõrvale retseptid, et poest lihtsam asju osta oleks ja saaks täpselt toitumisnõuded ära täita.
