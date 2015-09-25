@@ -98,10 +98,10 @@ $parool_error = "See väli on kohustuslik";
  
 <input text="Name" placeholder ="Name">
 <input text ="Lastname" placeholder="Lastname"><br><br>
-<input text="User" placeholder="User"><br><br>
+<input text="User" placeholder="User">
 <input text="Password" placeholder="Password"><br><br>
 <input text="Email" placeholder="Email"><br><br>
-<input text="submit" value="Submit"><br><br>
+<input type="submit" value="Submit"><br><br>
  Idee kirjeldus. Lisan lehele Logimis ja registeerimis vormid, peale mida lisan lehti juurde ja mõned pildid etc.
 
 
