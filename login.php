@@ -58,7 +58,7 @@ Skidum, skidee, skidoo.
 <input type="Kasutajanimi" placeholder="Kasutajanimi">
 <input type="Parool" placeholder="Parool">
 <input type="Email" placeholder="Email">
- 
+<input type="submit" value="Registeeri"><br><br>
  
  
 
