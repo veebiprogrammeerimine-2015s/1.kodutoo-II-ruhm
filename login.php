@@ -3,10 +3,8 @@
 <?php
 	
 	//ma tahaksin tegeleda kunstitarbete e-poega, kus on registreerimissüsteem, 
-	//tarbete nimikiri, iga tarbete kirjeldus, on võimalik tarbed tellida, on ostukorv, 
-	//tellimise vorm ja pakkuvad maksmiseviisid
+	//tarbete nimikiri, iga tarbete kirjeldus, on võimalik tarbed tellida, ja tellimise vorm
 	
-	//echo $_POST["email"];
 	
 	//Defineerime muutujad vigased
 	$email_error = "";
