@@ -94,3 +94,8 @@
 	
 </body>
 </html>
+
+
+
+
+//MVP idee. Kirjuta ideid mis sul tuleb kui sa kivis oled.
