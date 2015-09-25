@@ -1,5 +1,9 @@
 <?php
 		
+	// Idee 
+	//Kasutaja saab sisestada summa, mida ta tahaks investeerida ning leht pakub välja erinevaid võimalusi, kuhu see siis paigutada. Võiks ka näidata riski protsenti, aasta tootlust ning kiiret ülevaadet.
+	
+	
 	// muuutujad errorite jaoks
 	$email_error = "";
 	$password_error = "";
