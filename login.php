@@ -31,16 +31,10 @@ $parool_error = "See väli on kohustuslik";
 <title>Login Page </title>
 </head>
 <body>
-<div style="background-color:blue; color:white; padding:20px;">
+
 <h2>Lehekülg</h2>
-<p> Eeny, Meeny, Miny, Mo,
-Catch a nigger by his toe,
-If he won't work then let him go;
-Skidum, skidee, skidoo.
- </p>
-</div>
-<img class="irc_mi" style="margin-top: 31px;" src="http://images.sodahead.com/polls/000182383/polls_kkk_4643_222983_answer_1_xlarge.jpeg" width="350" height="332">
-<a href="https://www.youtube.com/watch?v=CPMdiUOy-jo">Selgitus video</a>
+
+
 <h2> Login </h2>
 <form action="login.php" method="POST">
 <input type="email" placeholder="E-post"><?php echo  $email_error; ?>  <br><br>
@@ -57,7 +51,7 @@ Skidum, skidee, skidoo.
  
 <input type="Kasutajanimi" placeholder="Kasutajanimi">
 <input type="Parool" placeholder="Parool">
-<input type="Email" placeholder="Email">
+<input type="Email" placeholder="Email"><br><br>
 <input type="submit" value="Registeeri"><br><br>
  
  
