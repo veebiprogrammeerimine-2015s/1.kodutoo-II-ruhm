@@ -9,7 +9,7 @@ $first_name_error="";
 $last_name_error="";
 $user_error="";
 $password_error="";
-$email_error=";
+$email_error="";
 //kontrollin kas keegi vajutas nuppu
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
@@ -20,7 +20,7 @@ $email_error = "See väli on kohustuslik";
 }
 
 
-if(empty($_POST["Parool"])){
+if(empty($_POST["Password"])){
 $parool_error = "See väli on kohustuslik";
 }
 
@@ -31,8 +31,14 @@ $first_name_error = "See väli on kohustuslik";
 if(empty($_POST ["last_name"])){
 	$last_name_error="See väli on kohustuslik";
 	
-}
+if(empty($_POST ["user_name"])){
+	$user_name_error="See väli on kohustuslik";
 
+if(empty($_POST ["password"])){
+	$password_error="See väli on kohustuslik";
+
+if(empty($_POST ["email"])){
+	$email_error="See väli on kohustuslik";
 
 }
 ?>
@@ -60,11 +66,11 @@ if(empty($_POST ["last_name"])){
 
 <input name="first_name" type="text" placeholder ="Name"><?php echo $first_name_error; ?><br><br>
 <input name ="Lastname" type="text " placeholder="Lastname"><?php echo $last_name_error; ?><br><br>
-<input name="User" type="text" placeholder="User"><?php echo $user_error;?><br><br>
+<input name="User" type="text" placeholder="Username"><?php echo $user_error;?><br><br>
 <input name="Password" type="text" placeholder="Password"><?php echo $password_error?><br><br>
 <input name="Email" type="text" placeholder="Email"><?php echo $email_error?><br><br>
 <input type="submit" value="Submit"><br><br>
- Idee kirjeldus. Lisan lehele Logimis ja registeerimis vormid, peale mida lisan lehti juurde ja mõned pildid etc.
+ Idee kirjeldus. Lisan lehele Logimis ja registeerimis vormid, peale mida lisan lehti juurde , kuhu saab lisada pilte ja postitusi.
 
 
 
