@@ -19,25 +19,22 @@ echo "jah";
 
 
 
-if(empty($_POST["Password"])){
-	parool_error = "See väli on kohustuslik";
-		}
 
 if(empty($_POST["first_name"])){
-	$first_name_error = "See väli on kohustuslik";
+	$firs_name_error = "See väli on kohustuslik";
 		}
 
 if(empty($_POST ["last_name"])){
-	$last_name_error="See väli on kohustuslik";
+	$last_name_error = "See väli on kohustuslik";
 }	
 if(empty($_POST ["user_name"])){
-	$user_name_error="See väli on kohustuslik";
+	$user_name_error = "See väli on kohustuslik";
 }
 if(empty($_POST ["password"])){
-	$password_error="See väli on kohustuslik";
+	$password_error = "See väli on kohustuslik";
 }
 if(empty($_POST ["email"])){
-	$email_error="See väli on kohustuslik";
+	$email_error = "See väli on kohustuslik";
 }
 }
 ?>
@@ -51,12 +48,12 @@ if(empty($_POST ["email"])){
 <h2> Create User </h2>
 
 <form action="leht2.php" method="POST">
-<input name="first_name" type="text" placeholder ="Name"><?php echo $first_name_error; ?><br><br>
-<input name ="Lastname" type="text " placeholder="Lastname"><?php echo $last_name_error; ?><br><br>
-<input name="User" type="text" placeholder="Username"><?php echo $user_error;?><br><br>
-<input name="Password" type="text" placeholder="Password"><?php echo $password_error?><br><br>
-<input name="Email" type="text" placeholder="Email"><?php echo $email_error?><br><br>
-<input type="submit" value="Submit"><br><br>
+<input name="first_name" type="text" placeholder ="name"><?php echo $first_name_error; ?><br><br>
+<input name ="lastname" type="text " placeholder="lastname"><?php echo $last_name_error; ?><br><br>
+<input name="user" type="text" placeholder="username"><?php echo $user_error;?><br><br>
+<input name="password" type="text" placeholder="password"><?php echo $password_error?><br><br>
+<input name="email" type="text" placeholder="email"><?php echo $email_error?><br><br>
+<input type="submit" value="submit"><br><br>
 </form>
 
 
