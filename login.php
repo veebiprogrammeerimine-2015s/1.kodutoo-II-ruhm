@@ -61,15 +61,10 @@ if(empty($_POST ["email"])){
 <input type="submit" value="Logi sisse" > <br><br>
 </form>
 
-<h2> Create User </h2>
+<h2> <a href="../1.kodutoo-II-ruhm/leht2">Create User </a> </h2>
 
 
-<input name="first_name" type="text" placeholder ="Name"><?php echo $first_name_error; ?><br><br>
-<input name ="Lastname" type="text " placeholder="Lastname"><?php echo $last_name_error; ?><br><br>
-<input name="User" type="text" placeholder="Username"><?php echo $user_error;?><br><br>
-<input name="Password" type="text" placeholder="Password"><?php echo $password_error?><br><br>
-<input name="Email" type="text" placeholder="Email"><?php echo $email_error?><br><br>
-<input type="submit" value="Submit"><br><br>
+
  Idee kirjeldus. Lisan lehele Logimis ja registeerimis vormid, peale mida lisan lehti juurde , kuhu saab lisada pilte ja postitusi.
 
 
