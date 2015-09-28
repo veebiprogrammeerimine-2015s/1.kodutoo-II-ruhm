@@ -15,31 +15,31 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 echo "jah";
 
-if(empty($_POST["email"])){
+	if(empty($_POST["email"])){
 $email_error = "See väli on kohustuslik";
 }
 
 
-if(empty($_POST["Password"])){
-$parool_error = "See väli on kohustuslik";
-}
+	if(empty($_POST["Password"])){
+		$parool_error = "See väli on kohustuslik";
+		}
 
-if(empty($_POST["first_name"])){
-$first_name_error = "See väli on kohustuslik";
-}
+	if(empty($_POST["first_name"])){
+		$first_name_error = "See väli on kohustuslik";
+		}
 
 if(empty($_POST ["last_name"])){
 	$last_name_error="See väli on kohustuslik";
-	
+}	
 if(empty($_POST ["user_name"])){
 	$user_name_error="See väli on kohustuslik";
-
+}
 if(empty($_POST ["password"])){
 	$password_error="See väli on kohustuslik";
-
+}
 if(empty($_POST ["email"])){
 	$email_error="See väli on kohustuslik";
-
+}
 }
 ?>
 

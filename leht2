@@ -1,0 +1,22 @@
+<html>
+<head>
+Creat User
+</head>
+<body>
+<h2>Creat User</h2>
+
+
+
+
+<h2> Create User </h2>
+
+
+<input name="first_name" type="text" placeholder ="Name"><?php echo $first_name_error; ?><br><br>
+<input name ="Lastname" type="text " placeholder="Lastname"><?php echo $last_name_error; ?><br><br>
+<input name="User" type="text" placeholder="Username"><?php echo $user_error;?><br><br>
+<input name="Password" type="text" placeholder="Password"><?php echo $password_error?><br><br>
+<input name="Email" type="text" placeholder="Email"><?php echo $email_error?><br><br>
+<input type="submit" value="Submit"><br><br>
+</body>
+
+</html>
