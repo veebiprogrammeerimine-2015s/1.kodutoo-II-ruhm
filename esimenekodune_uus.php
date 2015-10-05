@@ -60,11 +60,6 @@
 			if(	$create_username_error == "" && $create_password_error == ""){
 				echo "Võib kasutajat luua! Kasutajanimi on ".$create_username." ja parool on ".$create_password;
       }
-    }
-	}
-  }
- 
-
 ?>
 <!DOCTYPE html>
 <html>
