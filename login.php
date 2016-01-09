@@ -14,50 +14,59 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		//echo "jah";
-		
+		if(isset($_POST["login"])){
+			
+			if( empty($_POST["email"]) ) {
+				
+				//jah oli tühi
+				$create_email_error = "E-post on kohustuslik!";
+			}
+			//Kas parool on tühi
+			if( empty($_POST["password"]) ) {
+				
+				//jah oli tühi
+				$password_error = "Parool on kohustuslik!";
+			
+			}
+			
+			
+			
+		}
+		if(isset($_POST["create"])){
 		//Kas epost on tühi
-		if( empty($_POST["email"]) ) {
+			if( empty($_POST["create_email"]) ) {
+				
+				//jah oli tühi
+				$email_error = "E-post on kohustuslik!";
+			}
 			
-			//jah oli tühi
-			$email_error = "E-post on kohustuslik!";
-		}
-		if( empty($_POST["email"]) ) {
+			if( empty($_POST["_create_password"]) ) {
+				
+				//jah oli tühi
+				$create_password_again_error = "Parool on kohustuslik!";
 			
-			//jah oli tühi
-			$create_email_error = "E-post on kohustuslik!";
-		}
-		//Kas parool on tühi
-		if( empty($_POST["password"]) ) {
+			}
+			if( empty($_POST["create_password_again"]) ) {
+				
+				//jah oli tühi
+				$create_password_error = "Parool on kohustuslik!";
 			
-			//jah oli tühi
-			$password_error = "Parool on kohustuslik!";
-		
-		}
-		if( empty($_POST["password"]) ) {
+			}
 			
-			//jah oli tühi
-			$create_password_again_error = "Parool on kohustuslik!";
-		
-		}
-		if( empty($_POST["password"]) ) {
+			if( empty($_POST["firstname"]) ) {
+				
+				//jah oli tühi
+				$firstname_error = "Eesnimi on kohustuslik!";
 			
-			//jah oli tühi
-			$create_password_error = "Parool on kohustuslik!";
-		
-		}
-		if( empty($_POST["text"]) ) {
+			}
 			
-			//jah oli tühi
-			$firstname_error = "Eesnimi on kohustuslik!";
-		
-		}
-		
-		if( empty($_POST["text"]) ) {
+			if( empty($_POST["lastname"]) ) {
+				
+				//jah oli tühi
+				$lastname_error = "Perekonnanimi on kohustuslik!";
 			
-			//jah oli tühi
-			$lastname_error = "Perekonnanimi on kohustuslik!";
-		
-		}
+			}
+		}	
 		
 		
 	}
