@@ -1,0 +1,62 @@
+
+<?php
+
+//echo $_POST["email"];
+
+
+
+
+$first_name_error="";
+$last_name_error="";
+$user_error="";
+$password_error="";
+$email_error="";
+//kontrollin kas keegi vajutas nuppu
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+
+echo "jah";
+
+
+
+
+
+if(empty($_POST["first_name"])){
+	$firs_name_error = "See väli on kohustuslik";
+		}
+
+if(empty($_POST ["last_name"])){
+	$last_name_error = "See väli on kohustuslik";
+}	
+if(empty($_POST ["user_name"])){
+	$user_name_error = "See väli on kohustuslik";
+}
+if(empty($_POST ["password"])){
+	$password_error = "See väli on kohustuslik";
+}
+if(empty($_POST ["email"])){
+	$email_error = "See väli on kohustuslik";
+}
+}
+?>
+<html>
+<head>
+
+</head>
+<body>
+
+
+<h2> Create User </h2>
+
+<form action="leht2.php" method="POST">
+<input name="first_name" type="text" placeholder ="name"><?php echo $first_name_error; ?><br><br>
+<input name ="lastname" type="text " placeholder="lastname"><?php echo $last_name_error; ?><br><br>
+<input name="user" type="text" placeholder="username"><?php echo $user_error;?><br><br>
+<input name="password" type="text" placeholder="password"><?php echo $password_error?><br><br>
+<input name="email" type="text" placeholder="email"><?php echo $email_error?><br><br>
+<input type="submit" value="submit"><br><br>
+</form>
+
+
+</body>
+
+</html>
