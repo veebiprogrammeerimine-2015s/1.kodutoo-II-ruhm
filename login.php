@@ -4,7 +4,7 @@
 
 
 $email_error="";
-$parool_error="";
+$password_error="";
 
 //kontrollin kas keegi vajutas nuppu
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -17,7 +17,7 @@ echo "jah";
 
 
 	if(empty($_POST["Password"])){
-		$parool_error = "See väli on kohustuslik";
+		$password_error = "See väli on kohustuslik";
 }
 }
 ?>
@@ -36,11 +36,11 @@ echo "jah";
 <h2> Login </h2>
 <form action="login.php" method="POST">
 <input type="email" placeholder="E-post"><?php echo  $email_error; ?>  <br><br>
-<input type="password" placeholder="Parool"><?php echo $parool_error; ?> <br><br>
+<input type="password" placeholder="Parool"><?php echo $password_error; ?> <br><br>
 <input type="submit" value="Logi sisse" > <br><br>
 </form>
 
-<h2> <a href="../1.kodutoo-II-ruhm/leht2">Not user? <br>Create User here!<br> </a> </h2>
+<h2> <a href="leht2.php">Not user? <br>Create User here!<br> </a> </h2>
 
 
 

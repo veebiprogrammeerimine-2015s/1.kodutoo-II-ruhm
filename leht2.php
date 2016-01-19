@@ -104,6 +104,6 @@ function cleanInput($data) {
 	</form>
 	<br><br>
 	
-	
+	<h2> <a href="login.php">Back to login!  </a> </h2>
 	
 
