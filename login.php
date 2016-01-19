@@ -8,18 +8,23 @@ $password_error="";
 
 //kontrollin kas keegi vajutas nuppu
 if($_SERVER["REQUEST_METHOD"]=="POST"){
+	
+	
+	
 
-echo "jah";
 
-	if(empty($_POST["email"])){
+		if(empty($_POST["email"])){
 		$email_error = "See väli on kohustuslik";
-}
+			}	
+	
 
 
-	if(empty($_POST["Password"])){
+
+		if(empty($_POST["Password"])){
 		$password_error = "See väli on kohustuslik";
-}
-}
+			}
+		
+  }
 ?>
 
 
